@@ -1,0 +1,534 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,32,0.7)),url('../images/wallpaper.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: center;
+}
+nav img{
+    width: 200px;
+    height: 200px;
+    margin-top: -55px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition:0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+}
+nav .fas{
+    display: none;
+}
+@media(max-width:700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: fixed;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fas{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+    nav{
+        justify-content: space-between;
+    }
+    nav img{
+        width: 150px;
+        height: 150px;
+        margin-top: -28px;
+    }
+}
+
+/* ------------truck types----------------- */
+.course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.course-col{
+    flex-basis: 23%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.course-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+@media(max-width:700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+/*------------- facilities------------ */
+.facilities{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.facilities-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.facilities-col img{
+    width: 20%;
+    border-radius: 10px;
+    text-align: center;
+}
+.facilities-col p{
+    padding: 0;
+    text-align: center;
+}
+.facilities-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/*---------------footer---------------- */
+.footer{
+    margin: 20px auto;
+    width: 80%;
+    text-align: center;
+    padding: 50px 0;
+}
+.footer h3{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+    /* color: #fff; */
+}
+.footer p{
+    /* color: #fff; */
+    padding: 0 5%;
+}
+.icons .fab{
+    color: #f44336;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+.fas,.far{
+    color: #f44336;
+}
+
+
+/*------------------------- About page css is here----------------------------- */
+.sub-header{
+    height: 70vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('../images/about.jpeg');
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.sub-header h1{
+    margin-top: 70px;
+}
+
+/* ------------about us content------------ */
+.about-us{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 10px;
+}
+.about-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+.about-col img{
+    width: 100%;
+}
+.about-col h1{
+    padding-top: 0;
+    text-align: center;
+}
+.about-col p{
+    padding: 15px 0 25px;
+}
+.red-btn{
+    border: 1px solid #f44336;
+    background: transparent;
+    color: #f44336;
+    margin-left: 30%;
+}
+.red-btn:hover{
+    color: #fff;
+}
+@media(max-width:700px){
+    .red-btn{
+        margin-left: 25%;
+    }
+}
+
+/* ------------ contact page css------------- */
+.location{
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+.location iframe{
+    width: 100%;
+}
+.contact-us{
+    width: 80%;
+    margin: auto;
+}
+.contact-col{
+    flex-basis: 48%;
+    margin-bottom: 30px;
+}
+.contact-col div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.contact-col div .fas,
+.contact-col div .far{
+    font-size: 28px;
+    color: #f44336;
+    margin: 10px;
+    margin-right: 30px;
+}
+.contact-col div p{
+    padding: 0;
+}
+.contact-col div h5{
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 400;
+}
+.contact-col input,.contact-col textarea{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+
+/* -------------Truck type css------------- */
+h4{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+    margin-top: 50px;
+    font-size: 20px;
+}
+table{
+    margin: auto;
+    width: 80%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+thead{
+    background-color:#00203fff;
+    border: 1px solid black;
+    color: white;
+}
+thead th{
+    padding: 12px 0;
+    width: 25%;
+}
+td{
+    padding: 8px 0;
+}
+tbody tr:nth-child(even) {
+    background-color: #adefd1ff;
+  }
+@media(max-width:700px){
+    h4{
+        font-size: 18px;
+    }
+    table{
+        width: 90%;
+        font-size: 12px;
+    }
+   .type h5{
+       padding-left: 10px;
+   }
+   .type p{
+       margin: 0 15px;
+   }
+}
+
+.type h3{
+    margin-top: 25px;
+}
+.type p{
+    margin: 0 70px;
+}
+.type h5{
+    font-size: 18px;
+    font-style: bold;
+    padding-left: 80px;
+    margin-top: 15px;
+}
+.type ul{
+    padding-left: 120px;
+    color: #777;
+    font-size: 14px;
+}
+
+/* --------- form css---------- */
+#book-header{
+    height: 10vh;
+}
+.consignee{
+    width: 700px;
+    margin: 100px auto 0px auto;
+    border: 1px solid black;
+    text-align: center;
+    background-color: rgb(223, 218, 218);
+    height: 55vh;
+}
+.head{
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+}
+label{
+    margin-right: 12px;
+    font-size: 25px;
+}
+.submit{
+    width: 200px;
+    padding: 7px;
+    font-size: 25px;
+    font-weight: 600;
+    border-radius: 3px;
+    background-color: rgba(250,100,0,0.8);
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+#name1{
+    width: 50%;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    outline: 0;
+    padding: 7px;
+    background-color: #fff;
+    box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
+    font-size: 25px;
+    margin-right: -35px;
+    text-align: center;
+}
+#name2{
+    width: 50%;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    outline: 0;
+    padding: 7px;
+    background-color: #fff;
+    box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
+    font-size: 25px;
+    margin-right: 50px;
+    text-align: center;
+}
+#name3{
+    width: 50%;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    outline: 0;
+    padding: 7px;
+    background-color: #fff;
+    box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
+    font-size: 25px;
+    margin-right: 50px;
+    text-align: center;
+}
+#name4{
+    width: 50%;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    outline: 0;
+    padding: 7px;
+    background-color: #fff;
+    box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
+    font-size: 25px;
+    margin-right: -10px;
+    text-align: center;
+}
+#name5{
+    width: 50%;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    outline: 0;
+    padding: 7px;
+    background-color: #fff;
+    box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
+    font-size: 25px;
+    margin-right: 15px;
+    text-align: center;
+}
+#name6{
+    width: 50%;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    outline: 0;
+    padding: 7px;
+    background-color: #fff;
+    box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
+    font-size: 25px;
+    margin-right: 0px;
+    text-align: center;
+}
+#name7{
+    width: 50%;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    outline: 0;
+    padding: 7px;
+    background-color: #fff;
+    box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
+    font-size: 25px;
+    margin-right: -48px;
+    text-align: center;
+}
+#name8{
+    width: 50%;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    outline: 0;
+    padding: 7px;
+    background-color: #fff;
+    box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
+    font-size: 25px;
+    margin-right: -53px;
+    text-align: center;
+}
+#name9{
+    width: 50%;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    outline: 0;
+    padding: 7px;
+    background-color: #fff;
+    box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
+    font-size: 25px;
+    margin-right: 0px;
+    text-align: center;
+}
+.consignee2{
+    height: 65vh;
+}
